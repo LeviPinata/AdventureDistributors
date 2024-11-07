@@ -1,0 +1,49 @@
+{# Site-wide variables #}
+{% set navigation = craft.entries.section('navigation').all() %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ siteName }}</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!--Promotional Banner-->
+        {# No banner yet #}
+        <!--Header/Nav-->
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    {% for link in navigation %}
+                    {% if link.type == "internalLink" %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{link.navLink}}">{{link.title}}</a>
+                    </li>
+                    {% elseif link.type == "externalLink" %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{link.navLink}}" target="_blank">{{link.title}}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+
+        <!--Content-->
+        {% block content %}
+        {% endblock %}
+
+        <!--Footer-->
+        <div class="container content-align-center">
+            <h4>&copy; Steve's Outdoor Adventures <script>document.write(/\d{4}/.exec(Date())[0])</script></h4>
+            <p>Website by <a href="https://levipringle.net" target="_blank" style="color: rgb(0, 128, 100);">Levi Pringle</a></p>
+        </div>
+    </div>
+</body>
+</html>

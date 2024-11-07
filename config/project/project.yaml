@@ -1,0 +1,28 @@
+dateModified: 1730416681
+email:
+  fromEmail: levitpringle@gmail.com
+  fromName: soa-ecommerce
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    7db8d3e8-0fdc-4b95-99c6-ca1a070a2b43: 'Internal Link' # Internal Link
+    7f5d909b-cb28-487e-9983-ad58358e8bd5: Navigation # Navigation
+    35e90512-ecda-42c8-9be2-66cd7511627e: soa-ecommerce # soa-ecommerce
+    499f1502-cd22-467e-b783-f88eaccd7d0b: 'External Link' # External Link
+    545dbae7-338b-492a-a24b-9153a051d72a: soa-ecommerce # soa-ecommerce
+    5077630c-bce5-401d-a4a4-f43e3e7b6d51: Home # Home
+    bc21ecad-498f-46f6-b9f8-6e75358584ea: 'Nav Link' # Nav Link
+    f27e355f-cdc4-4325-9c14-94e60e667bfa: Home # Home
+system:
+  edition: solo
+  live: true
+  name: soa-ecommerce
+  schemaVersion: 5.3.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

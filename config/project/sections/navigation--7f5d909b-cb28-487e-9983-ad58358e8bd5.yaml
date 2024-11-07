@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 499f1502-cd22-467e-b783-f88eaccd7d0b # External Link
+  - 7db8d3e8-0fdc-4b95-99c6-ca1a070a2b43 # Internal Link
+handle: navigation
+maxAuthors: 1
+name: Navigation
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  545dbae7-338b-492a-a24b-9153a051d72a: # soa-ecommerce
+    enabledByDefault: true
+    hasUrls: true
+    template: navigation/_entry.twig
+    uriFormat: 'navigation/{slug}'
+structure:
+  maxLevels: null
+  uid: 39d3a305-4d21-426f-84b5-2ca23aef6815
+type: structure
