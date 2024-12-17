@@ -12105,13 +12105,25 @@ body {
   background-repeat: repeat-y;
   font-family: "Cabin", Verdana, sans-serif;
   color: #ffffff;
-  margin-bottom: 50px;
 }
 
 h1 {
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
+}
+
+h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px orangered;
+}
+
+h3 {
+  color: orangered;
+}
+
+h4 {
+  color: #ffffff;
 }
 
 button {
@@ -12145,13 +12157,15 @@ button :hover {
 
 .dropdown-menu {
   background-color: #1f2020;
+  width: 750px !important;
 }
-.dropdown-menu .dropdown-item {
-  color: #ffffff;
+@media screen and (max-width: 800px) {
+  .dropdown-menu {
+    width: 400px !important;
+  }
 }
 
 .footer {
-  position: fixed;
   height: 80px;
   background-color: #1f2020;
   bottom: 0px;
@@ -12167,4 +12181,25 @@ button :hover {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.category-card {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.category-image {
+  width: 100%;
+  border-radius: 10px;
+  border: solid;
+  border-color: orangered;
+}
+
+.category-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

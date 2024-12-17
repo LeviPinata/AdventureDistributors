@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="m-0">
     <div class="container-fluid p-0">
         <!--Promotional Banner-->
         {# No banner yet #}
@@ -27,11 +27,63 @@
                     <ul class="nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Link</a></li>
-                                <li><a class="dropdown-item" href="#">Link</a></li>
-                                <li><a class="dropdown-item" href="#">Link</a></li>
-                            </ul>
+                            <div class="dropdown-menu" style="width: 100%;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Clothing & Boots</u></h3></a>
+                                            <a href="#"><h4>-Hunting</h4></a>
+                                            <a href="#"><h4>-Fishing</h4></a>
+                                            <a href="#"><h4>-Generic</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Wader & Wader Boots</u></h3></a>
+                                            <a href="#"><h4>-Waders</h4></a>
+                                            <a href="#"><h4>-Wader Boots</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Vehicle Accessories</u></h3></a>
+                                            <a href="#"><h4>-Seat Covers</h4></a>
+                                            <a href="#"><h4>-Light Bars</h4></a>
+                                            <a href="#"><h4>-Winches</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Reloading</u></h3></a>
+                                            <a href="#"><h4>-Equipment</h4></a>
+                                            <a href="#"><h4>-Components</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Backpacks</u></h3></a>
+                                            <a href="#"><h4>-Hunting</h4></a>
+                                            <a href="#"><h4>-Fishing</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Optics</u></h3></a>
+                                            <a href="#"><h4>-Rifle Scopes</h4></a>
+                                            <a href="#"><h4>-Spotting Scopes</h4></a>
+                                            <a href="#"><h4>-Binoculars</h4></a>
+                                            <a href="#"><h4>-Range Finders</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Ammunition</u></h3></a>
+                                            <a href="#"><h4>-Rifle</h4></a>
+                                            <a href="#"><h4>-Shotgun Shells</h4></a>
+                                            <a href="#"><h4>-Pistol Ammo</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Firearms</u></h3></a>
+                                            <a href="#"><h4>-Rifles</h4></a>
+                                            <a href="#"><h4>-Shotguns</h4></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#"><h3><u>Camping</u></h3></a>
+                                            <a href="#"><h4>-Tents</h4></a>
+                                            <a href="#"><h4>-Sleeping Bags</h4></a>
+                                            <a href="#"><h4>-Sleeping Pads</h4></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav-item nav-link">|</li>
                         <li class="nav-item">
@@ -46,7 +98,7 @@
         {#% block content %}
         {% endblock %#}
         <!--banner img-->
-        <div class="container-fluid banner row px-0 mx-0">
+        <div class="container-fluid banner row px-0 mx-0 mb-5">
             <div class="col-md-4 m-auto">
                 <img src="/assets/images/FullLogo_Transparent.png" style="width: 100%;">
             </div>
@@ -59,7 +111,41 @@
             </div>
         </div>
         <!--cards-->
-        <div class="container">
+        <div class="container" style="margin-bottom: 100px;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="category-card mx-auto pb-2">
+                        <a href="#">
+                            <img class="category-image" src="/assets/images/backpack.jpg">
+                            <h2 class="category-title">Backpacks</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-card mx-auto pb-2">
+                        <a href="#">
+                            <img class="category-image" src="/assets/images/bullets.png">
+                            <h2 class="category-title">Ammo</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-card mx-auto pb-2">
+                        <a href="#">
+                            <img class="category-image" src="/assets/images/tent.jpg">
+                            <h2 class="category-title">Camping</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-card mx-auto pb-2">
+                        <a href="#">
+                            <img class="category-image" src="/assets/images/clothes.jpg">
+                            <h2 class="category-title">Clothing</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--Footer-->
         <div class="footer container-fluid">
