@@ -1,4 +1,75 @@
+@use 'variables.scss';
+
 body {
-    background-color: $blue;
+    background-image: url(../images/262838G.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+
+    font-family: 'Cabin', Verdana, sans-serif;
+    color: #ffffff;
+
+    margin-bottom: 50px;
 }
 
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    background-color: orangered;
+    border-style: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    :hover {
+        background-color: orange;
+        transition: 0.1s;
+    }
+}
+
+
+.navbar {
+    background-color: #1f2020;
+}
+
+.nav-links {
+    background-color: #0f5b78;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dropdown-menu {
+    background-color: #1f2020;
+    .dropdown-item {
+        color: #ffffff;
+    }
+}
+
+.footer {
+    position: fixed;
+    height: 80px;
+    background-color: #1f2020;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    color: #ffffff;
+}
+
+.banner {
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
