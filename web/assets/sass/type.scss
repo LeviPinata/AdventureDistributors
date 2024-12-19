@@ -11,6 +11,7 @@ body {
 }
 
 h1 {
+    color: #ffffff;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
@@ -18,19 +19,23 @@ h1 {
 
 h2 {
     color: #ffffff;
-    text-shadow: 2px 2px orangered;
+    text-shadow: 2px 2px #127faa;
 }
 
 h3 {
-    color: orangered;
+    color: #00be00;
 }
 
 h4 {
     color: #ffffff;
 }
 
+p {
+    color: #ffffff;
+}
+
 button {
-    background-color: orangered;
+    background-color: #00be00;
     border-style: none;
     border-radius: 8px;
     padding: 10px 15px;
@@ -38,34 +43,65 @@ button {
     font-size: x-large;
     font-weight: bold;
     text-transform: uppercase;
-    :hover {
-        background-color: orange;
-        transition: 0.1s;
+    transition: background-color 0.25s;
+    &:hover {
+        background-color: rgb(112, 223, 98);
     }
 }
-
 
 .navbar {
     background-color: #1f2020;
-}
 
-.nav-links {
-    background-color: #0f5b78;
-}
+    .nav-links {
+        background-color: #0f5b78;
 
-.nav-link {
-    color: #ffffff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+        .separator {
+            padding: 8px 16px;
+            font-weight: bold;
+        }
 
-.dropdown-menu {
-    background-color: #1f2020;
-    width: 750px !important;
-    @media screen and (max-width: 800px) {
-        width: 400px !important;
+        .nav-link {
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: #1f2020;
+        border-radius: 0px;
+        color: #ffffff;
+
+        .list-group-item {
+            background-color: transparent;
+            padding: 4px 16px;
+
+            .dropdown-item {
+                color: #ffffff;
+                font-size: 16px;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .active {
+            background-color: #707070;
+            border-color: #707070 !important;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            display: none;
+
+            ul {
+                list-style-type: disc;
+            }
+        }
     }
 }
+
 
 .footer {
     height: 80px;
@@ -90,18 +126,23 @@ button {
     text-align: center;
     color: white;
     width: 100%;
-}
+    transition: all 0.33s;
 
-.category-image {
-    width: 100%;
-    border-radius: 10px;
-    border: solid;
-    border-color: orangered;
-}
+    &:hover {
+        transform: scale(1.05);
+    }
 
-.category-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    .category-image {
+        width: 100%;
+        border-radius: 10px;
+        border: solid;
+        border-color: #0f5b78;
+    }
+    
+    .category-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
