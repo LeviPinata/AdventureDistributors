@@ -1,0 +1,48 @@
+{% for block in entry.contentBlocks.all() %}
+
+{% if block.type == "heroBanner" %}
+
+<!--banner img-->
+<div class="container-fluid banner row px-0 mx-0 mb-5" style="background-image: url({{block.heroBannerImage.one().getUrl()}});">
+    <div class="col-md-4 m-auto">
+        <img src="/assets/images/FullLogo_Transparent.png" style="width: 100%;">
+    </div>
+    <div class="col-md-4 px-3 m-auto text-center">
+        <h1>Your One Stop Shop For Everything Hunting, Fishing, and Outdoors</h1>
+        <a href="#"><button>Explore</button></a>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+</div>
+
+{% elseif block.type == "categoryCards" %}
+
+<!--cards-->
+<div class="container" style="margin-bottom: 100px;">
+    <div class="row">
+        {% for category in categories %}
+        <div class="col-md-3">
+            <div class="category-card mx-auto pb-2">
+                <a href="#">
+                    <img class="category-image" src="{{category.categoryImage.one().getUrl()}}">
+                    <h2 class="category-title">{{category.title}}</h2>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% elseif block.type == "nothing" %}
+
+content 3
+
+{% endif %}
+
+{% else %}
+<div class="h-100 m-auto text-center">
+    <h1>No content found  D:</h1>
+</div>
+
+{% endfor %}

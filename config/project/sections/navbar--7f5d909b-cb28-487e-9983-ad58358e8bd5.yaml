@@ -3,9 +3,9 @@ enableVersioning: true
 entryTypes:
   - 499f1502-cd22-467e-b783-f88eaccd7d0b # External Link
   - 7db8d3e8-0fdc-4b95-99c6-ca1a070a2b43 # Internal Link
-handle: navigation
+handle: navbar
 maxAuthors: 1
-name: Navigation
+name: 'Navigation Bar'
 previewTargets:
   -
     __assoc__:

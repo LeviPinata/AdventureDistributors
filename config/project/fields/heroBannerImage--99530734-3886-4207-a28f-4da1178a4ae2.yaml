@@ -1,0 +1,35 @@
+columnSuffix: null
+handle: heroBannerImage
+instructions: null
+name: 'Hero Banner Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:12e8048e-d3a1-4d2c-bc3e-a9b6da163928' # Images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 0
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:12e8048e-d3a1-4d2c-bc3e-a9b6da163928' # Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add Banner Image'
+  showCardsInGrid: false
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:12e8048e-d3a1-4d2c-bc3e-a9b6da163928' # Images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

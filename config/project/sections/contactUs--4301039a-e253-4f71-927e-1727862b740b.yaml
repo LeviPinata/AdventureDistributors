@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 75a90b55-06a9-4ee2-9d8f-97ce8ef8354c # Contact Us
+handle: contactUs
+maxAuthors: 1
+name: 'Contact Us'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  545dbae7-338b-492a-a24b-9153a051d72a: # soa-ecommerce
+    enabledByDefault: true
+    hasUrls: true
+    template: contact-us/_entry.twig
+    uriFormat: contact-us
+type: single

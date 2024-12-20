@@ -1,0 +1,20 @@
+color: null
+fieldLayouts:
+  39d34e95-8e88-47f6-a0c8-47748c081d86:
+    tabs:
+      -
+        elementCondition: null
+        name: Content
+        uid: 5bbd70cc-660f-42d0-9ad1-d50d03571e5b
+        userCondition: null
+handle: categoryCards
+hasTitleField: false
+icon: null
+name: 'Category Cards'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

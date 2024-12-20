@@ -12098,7 +12098,12 @@ textarea.form-control-lg {
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background-image: url(../images/262838G.png);
   background-position: center;
   background-size: cover;
@@ -12146,6 +12151,11 @@ button:hover {
   background-color: rgb(112, 223, 98);
 }
 
+.main {
+  min-height: 100%;
+  margin-bottom: -80px;
+}
+
 .navbar {
   background-color: #1f2020;
 }
@@ -12153,7 +12163,7 @@ button:hover {
   background-color: #0f5b78;
 }
 .navbar .nav-links .separator {
-  padding: 8px 16px;
+  padding: 8px 8px;
   font-weight: bold;
 }
 .navbar .nav-links .nav-link {
@@ -12161,19 +12171,24 @@ button:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
+.navbar .nav-links .nav-link:hover {
+  background-color: #0f3a4d;
+}
 .navbar .dropdown-menu {
   background-color: #1f2020;
+  border: none;
   border-radius: 0px;
   color: #ffffff;
   /* Style the tab content */
 }
 .navbar .dropdown-menu .list-group-item {
   background-color: transparent;
-  padding: 4px 16px;
+  padding: 0px;
 }
 .navbar .dropdown-menu .list-group-item .dropdown-item {
   color: #ffffff;
   font-size: 16px;
+  padding: 8px 16px;
 }
 .navbar .dropdown-menu .list-group-item .dropdown-item:hover {
   background-color: transparent;
@@ -12194,14 +12209,11 @@ button:hover {
   height: 80px;
   background-color: #1f2020;
   bottom: 0px;
-  left: 0px;
-  right: 0px;
   margin-bottom: 0px;
   color: #ffffff;
 }
 
 .banner {
-  background-image: url(../images/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12216,7 +12228,7 @@ button:hover {
   transition: all 0.33s;
 }
 .category-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .category-card .category-image {
   width: 100%;

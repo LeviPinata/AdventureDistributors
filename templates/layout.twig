@@ -1,5 +1,7 @@
 {# Site-wide variables #}
-{% set navigation = craft.entries.section('navigation').all() %}
+{% set navbar = craft.entries.section('navbar').all() %}
+{% set categories = craft.categories.level(1) %}
+{% set subcategories = craft.categories.level(2) %}
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -12,7 +14,7 @@
     <script src="/assets/js/main.js"></script>
 </head>
 <body class="m-0">
-    <div class="container-fluid p-0">
+    <div class="container-fluid main p-0">
         <!--Promotional Banner-->
         {# No banner yet #}
         <!--Header/Nav-->
@@ -34,369 +36,59 @@
                             <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0; border-top-right-radius: 0;">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-4 col-lg-3">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Ammunition')"><a class="dropdown-item" href="#">Ammunition</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Archery')"><a class="dropdown-item" href="#">Archery</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Automotive')"><a class="dropdown-item" href="#">Automotive</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Backpacks')"><a class="dropdown-item" href="#">Backpacks</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Camping')"><a class="dropdown-item" href="#">Camping</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Clothing')"><a class="dropdown-item" href="#">Clothing & Boots</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Dogs')"><a class="dropdown-item" href="#">Dog Training</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Firearms')"><a class="dropdown-item" href="#">Firearms</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Fishing')"><a class="dropdown-item" href="#">Fishing</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Grills')"><a class="dropdown-item" href="#">Grills & Smokers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 col-lg-3">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Blinds')"><a class="dropdown-item" href="#">Ground Blinds</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Knives')"><a class="dropdown-item" href="#">Knives</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Optics')"><a class="dropdown-item" href="#">Optics</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Reloading')"><a class="dropdown-item" href="#">Reloading</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Shooting')"><a class="dropdown-item" href="#">Shooting</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Sunglasses')"><a class="dropdown-item" href="#">Sunglasses</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Cameras')"><a class="dropdown-item" href="#">Trail Cameras</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Treestands')"><a class="dropdown-item" href="#">Tree Stands</a></li>
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, 'Waterfowl')"><a class="dropdown-item" href="#">Waterfowl Hunting</a></li>
-                                            </ul>
-                                        </div>
-
+                                        {% set i = 1 %}
+                                        {% for category in categories %}
+                                            {% if i % 10 == 1 %}
+                                                <div class="col-md-4 col-lg-3">
+                                                <ul class="list-group list-group-flush">
+                                            {% endif %}
+                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, '{{category.title}}')"><a class="dropdown-item" href="#">{{category.title}}</a></li>
+                                            {% if (i % 10 == 0) or (i == categories|length) %}
+                                                </ul>
+                                                </div>
+                                            {% endif %}
+                                            {% set i = i + 1 %}
+                                        {% endfor %}
                                         <!--Tab Contents-->
-                                        <div id="Ammunition" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Ammunition</h3>
-                                            <ul>
-                                                <li><a>Rifle Ammo</a></li>
-                                                <li><a>Shotgun Shells</a></li>
-                                                <li><a>Pistol Ammo</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Archery" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Archery</h3>
-                                            <ul>
-                                                <li><a>Bows</a></li>
-                                                <li><a>Arrows</a></li>
-                                                <li><a>Broadheads</a></li>
-                                                <li><a>Miscellaneous</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Automotive" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Automotive</h3>
-                                            <ul>
-                                                <li><a>Seat Covers</a></li>
-                                                <li><a>Winches</a></li>
-                                                <li><a>Lights and Light Bars</a></li>
-                                                <li><a>Miscellaneous</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Backpacks" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Backpacks</h3>
-                                            <ul>
-                                                <li><a>Hunting</a></li>
-                                                <li><a>Fishing</a></li>
-                                                <li><a>Backpacking/Camping</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Camping" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Camping</h3>
-                                            <ul>
-                                                <li><a>Tents</a></li>
-                                                <li><a>Sleeping Bags</a></li>
-                                                <li><a>Stoves</a></li>
-                                                <li><a>Miscellaneous</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Clothing" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Clothing & Boots</h3>
-                                            <ul>
-                                                <li><a>Hunting Clothes</a></li>
-                                                <li><a>Fishing Clothes</a></li>
-                                                <li><a>Lifestyle Clothes (Generic)</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Dogs" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Dog Training</h3>
-                                            <ul>
-                                                <li><a>Collars & Leashes</a></li>
-                                                <li><a>Shock Collars</a></li>
-                                                <li><a>Training Dummies</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Firearms" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Firearms</h3>
-                                            <ul>
-                                                <li><a>Rifles</a></li>
-                                                <li><a>Shotguns</a></li>
-                                                <li><a>Muzzleloaders</a></li>
-                                                <li><a>Pistols</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Fishing" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Fishing</h3>
-                                            <ul>
-                                                <li><a>Spinning Rods & Reels</a></li>
-                                                <li><a>Bait Casting Rods & Reels</a></li>
-                                                <li><a>Fly Rods & Reels</a></li>
-                                                <li><a>Fly Line and Accessories</a></li>
-                                                <li><a>Fishing Tackle</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Grills" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Grills & Smokers</h3>
-                                        </div>
-                                        <div id="Blinds" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Ground Blinds</h3>
-                                            <ul>
-                                                <li><a>See Through Material</a></li>
-                                                <li><a>Solid Material</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Knives" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Knives</h3>
-                                            <ul>
-                                                <li><a>Fixed Blade</a></li>
-                                                <li><a>Replacement Blade</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Optics" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Optics</h3>
-                                            <ul>
-                                                <li><a>Rifle Scopes</a></li>
-                                                <li><a>Binoculars</a></li>
-                                                <li><a>Spotting Scopes</a></li>
-                                                <li><a>Rangefinders</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Reloading" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Reloading</h3>
-                                            <ul>
-                                                <li><a>Equipment</a></li>
-                                                <li><a>Components</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Shooting" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Shooting</h3>
-                                            <ul>
-                                                <li><a>Equipment</a></li>
-                                                <li><a>Shooting Rests</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Sunglasses" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Sunglasses</h3>
-                                        </div>
-                                        <div id="Cameras" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Trail Cameras</h3>
-                                        </div>
-                                        <div id="Treestands" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Tree Stands</h3>
-                                            <ul>
-                                                <li><a>Lock On</a></li>
-                                                <li><a>Climber</a></li>
-                                                <li><a>Ladder</a></li>
-                                            </ul>
-                                        </div>
-                                        <div id="Waterfowl" class="tabcontent col-md-4 col-lg-3">
-                                            <h3>Waterfowl Hunting</h3>
-                                            <ul>
-                                                <li><a>Decoys</a></li>
-                                                <li><a>Blind Material</a></li>
-                                                <li><a>Duck & Goose Calls</a></li>
-                                                <li><a>Miscellaneous</a></li>
-                                            </ul>
-                                        </div>
+                                        {% for category in categories %}
+                                            <div id="{{category.title}}" class="tabcontent col-md-4 col-lg-3">
+                                                <h3>{{category.title}}</h3>
+                                                <ul>
+                                                    {% for subcategory in subcategories.descendantOf(category) %}
+                                                        <li>{{subcategory.title}}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="separator">|</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>                        
-                        </li>
+                        {% for link in navbar %}
+                            <li class="separator">|</li>
+                            <li class="nav-item">
+                                {% if link.type == "internalLink" %}
+                                    <a class="nav-link" href="{{link.navLink}}">{{ link.title }}</a>
+                                {% else %}
+                                    <a class="nav-link" href="{{link.navLink}}" target="_blank">{{ link.title }}</a>
+                                {% endif %}          
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!--Content-->
-        {#% block content %}
-        {% endblock %#}
-        <!--banner img-->
-        <div class="container-fluid banner row px-0 mx-0 mb-5">
-            <div class="col-md-4 m-auto">
-                <img src="/assets/images/FullLogo_Transparent.png" style="width: 100%;">
-            </div>
-            <div class="col-md-4 px-3 m-auto text-center">
-                <h1>Your One Stop Shop For Everything Hunting, Fishing, and Outdoors</h1>
-                <a href="#"><button>Explore</button></a>
-            </div>
-            <div class="col-md-4">
-
-            </div>
-        </div>
-        <!--cards-->
-        <div class="container" style="margin-bottom: 100px;">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Ammunition Card.jpg">
-                            <h2 class="category-title">Ammunition</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Archery Card.png">
-                            <h2 class="category-title">Archery</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Automotive Card.png">
-                            <h2 class="category-title">Automotive</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Backpacks Card.jpg">
-                            <h2 class="category-title">Backpacks</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Camping Card.jpg">
-                            <h2 class="category-title">Camping</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Clothing Card.jpg">
-                            <h2 class="category-title">Clothing & Boots</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Dog Training Card.jpg">
-                            <h2 class="category-title">Dog Training</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Firearms Card.png">
-                            <h2 class="category-title">Firearms</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Fishing Card.jpg">
-                            <h2 class="category-title">Fishing</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Grills and Smokers Card.jpg">
-                            <h2 class="category-title">Grills & Smokers</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Ground Blind Card.png">
-                            <h2 class="category-title">Ground Blinds</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Knifes Card.jpg">
-                            <h2 class="category-title">Knives</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Optics Card.jpg">
-                            <h2 class="category-title">Optics</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Reloading Card.jpg">
-                            <h2 class="category-title">Reloading</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Shooting Card.jpg">
-                            <h2 class="category-title">Shooting</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Sunglasses Card.jpg">
-                            <h2 class="category-title">Sunglasses</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Trail Camera Card.jpg">
-                            <h2 class="category-title">Trail Cameras</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Treestand Card.jpg">
-                            <h2 class="category-title">Tree Stands</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-card mx-auto pb-2">
-                        <a href="#">
-                            <img class="category-image" src="/assets/images/Waterfowl Card.jpg">
-                            <h2 class="category-title">Waterfowl Hunting</h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Footer-->
-        <div class="footer container-fluid">
-            <div class="container pt-2">
-                <h4>&copy; Steve's Outdoor Adventures <script>document.write(/\d{4}/.exec(Date())[0])</script></h4>
-                <p>Website by <a href="https://levipringle.net" target="_blank" style="color: #008064;">Levi Pringle</a></p>
-            </div>
-        </div>
+        {% block content %}
+        {% endblock %}
     </div>
+    <!--Footer-->
+    <footer class="footer container-fluid">
+        <div class="container pt-2">
+            <h4>&copy; Steve's Outdoor Adventures <script>document.write(/\d{4}/.exec(Date())[0])</script></h4>
+            <p>Website by <a href="https://levipringle.net" target="_blank" style="color: #008064;">Levi Pringle</a></p>
+        </div>
+    </footer>
 </body>
 </html>

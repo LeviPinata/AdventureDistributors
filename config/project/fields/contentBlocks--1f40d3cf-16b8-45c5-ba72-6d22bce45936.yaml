@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: contentBlocks
+instructions: null
+name: 'Content Blocks'
+searchable: false
+settings:
+  createButtonLabel: 'New Content'
+  defaultIndexViewMode: cards
+  entryTypes:
+    - a209e571-accf-4a47-9e1d-1c3866d41810 # Hero Banner
+    - ecf38a79-fcfc-4927-a60b-883811cf1ef5 # Category Cards
+  includeTableView: false
+  maxEntries: 10
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
