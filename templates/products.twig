@@ -1,0 +1,47 @@
+{% extends 'layout' %}
+{% set subCategories = craft.categories.descendantOf(category) %}
+
+{% block content %}
+
+<div class="container my-1" style=" border-radius: 2px; background-color: rgb(32, 32, 32);">
+    <h1 class="py-4">{{category.title}}</h1>
+
+    <div class="row">
+        <!--Side Menu-->
+        <div class="shop-menu col-md-2 my-2 nav flex-column nav-pills" aria-orientation="vertical" style="border-style: hidden solid hidden hidden; border-color: white; border-width: 2px;">
+            <h4 class="mx-auto">Categories</h4>
+            <a class="nav-link" href="#">All products</a>
+            {% for subCat in subCategories %}
+                <a class="nav-link" href="{{subCat.url}}">{{subCat.title}}</a>
+            {% endfor %}
+            <hr>
+            <h4 class="mx-auto">Brands</h4>
+            <a class="nav-link" href="#">All Brands</a>
+        </div>
+
+        <!--Product list-->
+        <div class="col-md-10">
+            <div class="row">
+            {% for product in craft.entries.section('products').relatedTo(category) %}
+                <div class="col-md-3">
+                    <a href="{{product.url}}"><img src="{{product.productImages.one().getUrl()}}" style="display: block; max-height: 100%; max-width: 100%;"></a>
+                    <a href="{{product.url}}"><h3>{{product.title}}</h3></a>
+                    <h4>${{product.price}}</h4>
+                </div>
+            {% endfor %}
+            {% for product in craft.entries.section('products').relatedTo(subCategories) %}
+                <div class="col-md-3">
+                    <a href="{{product.url}}"><img src="{{product.productImages.one().getUrl()}}" style="display: block; max-height: 100%; max-width: 100%;"></a>
+                    <a href="{{product.url}}"><h3>{{product.title}}</h3></a>
+                    <h4>${{product.price}}</h4>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{#% include 'blocks' %#}
+{% endblock %}
+

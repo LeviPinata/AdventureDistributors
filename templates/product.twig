@@ -1,0 +1,13 @@
+{% extends 'layout' %}
+
+{% block content %}
+
+<div class="container">
+    <h2>{{entry.title}}</h2>
+    <img src="{{entry.productImages.one().getUrl()}}" width="100px" height="100px">
+    <p>{{entry.productDescription}}</p>
+    <a href="{{entry.avantLink}}"><button class="button">Purchase</button></a>
+    </div>
+{#% include 'blocks' %#}
+{% endblock %}
+

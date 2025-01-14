@@ -21,7 +21,7 @@
         <nav class="navbar navbar-dark bg-dark sticky-top pb-0">
             <!--Logo & Searchbar-->
             <div class="container">
-                <a class="navbar-brand" href="#"><img src="/assets/images/Logo.png" style="width: 250px"></a>
+                <a class="navbar-brand" href="/"><img src="/assets/images/Logo.png" style="width: 250px"></a>
                 <form class="d-flex mx-auto" style="width: 500px">
                     <input class="form-control me-2" type="text" placeholder="Search">
                 </form>
@@ -42,7 +42,7 @@
                                                 <div class="col-md-4 col-lg-3">
                                                 <ul class="list-group list-group-flush">
                                             {% endif %}
-                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, '{{category.title}}')"><a class="dropdown-item" href="#">{{category.title}}</a></li>
+                                                <li class="list-group-item tablink" onmouseover="expandCategory(event, '{{category.title}}')"><a class="dropdown-item" href="{{category.url}}">{{category.title}}</a></li>
                                             {% if (i % 10 == 0) or (i == categories|length) %}
                                                 </ul>
                                                 </div>

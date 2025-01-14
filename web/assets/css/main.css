@@ -12104,7 +12104,7 @@ html {
 
 body {
   height: 100%;
-  background-image: url(../images/262838G.png);
+  background-color: #3a3a3a;
   background-position: center;
   background-size: cover;
   background-repeat: repeat-y;
@@ -12124,7 +12124,7 @@ h2 {
   text-shadow: 2px 2px #127faa;
 }
 
-h3 {
+h3:hover {
   color: #00be00;
 }
 
@@ -12134,6 +12134,11 @@ h4 {
 
 p {
   color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 button {
@@ -12241,4 +12246,8 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.shop-menu .nav-link {
+  color: #ffffff;
 }

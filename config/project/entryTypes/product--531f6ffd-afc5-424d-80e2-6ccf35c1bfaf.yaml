@@ -1,0 +1,131 @@
+color: null
+fieldLayouts:
+  a3a59513-6a50-4f57-83b4-73d21594c08d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-01-07T23:27:56+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: bb169e48-002f-4d09-8228-63a0f3964b64
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-07T23:33:53+00:00'
+            elementCondition: null
+            fieldUid: 5f7978e1-e94c-4d89-ba5f-05dd70e4155f # Product Category
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f3a324ea-8104-4a26-8644-d70731898897
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-07T23:33:53+00:00'
+            elementCondition: null
+            fieldUid: eb6f21a9-c367-4cdd-80c3-6c6bbad85138 # AvantLink
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 45a5e607-4486-4ab3-a025-ba572c73487a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-07T23:33:53+00:00'
+            elementCondition: null
+            fieldUid: de498f5f-35d2-48a2-9c8c-a9bef898f09e # Product Images
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f8e9ad18-17b6-4d60-83b0-f2ea78b5919c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-09T23:59:24+00:00'
+            elementCondition: null
+            fieldUid: 07aa8234-5a9e-4a57-ba55-04929eb103fe # Price
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c367378a-76ec-450a-8e28-771b318043af
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-07T23:33:53+00:00'
+            elementCondition: null
+            fieldUid: 9cccf1bc-161a-40e8-92f4-78a926a51b41 # Product Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74289636-42fd-441b-9543-798b95361306
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cc07ab9e-2fcc-4ca0-8d4e-28b164785526
+        userCondition: null
+handle: product
+hasTitleField: true
+icon: null
+name: Product
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

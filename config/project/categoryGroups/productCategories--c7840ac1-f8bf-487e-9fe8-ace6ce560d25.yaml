@@ -59,8 +59,8 @@ name: 'Product Categories'
 siteSettings:
   545dbae7-338b-492a-a24b-9153a051d72a: # soa-ecommerce
     hasUrls: true
-    template: product-category
-    uriFormat: 'product-categories/{slug}'
+    template: products
+    uriFormat: '{slug}'
 structure:
   maxLevels: null
   uid: d50f9144-dd0b-43c3-ac5b-80cf1ab67606

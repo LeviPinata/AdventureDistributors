@@ -1,4 +1,4 @@
-dateModified: 1734724629
+dateModified: 1736467376
 email:
   fromEmail: levitpringle@gmail.com
   fromName: soa-ecommerce
@@ -14,21 +14,28 @@ fs:
 meta:
   __names__:
     1f40d3cf-16b8-45c5-ba72-6d22bce45936: 'Content Blocks' # Content Blocks
+    5f7978e1-e94c-4d89-ba5f-05dd70e4155f: 'Product Category' # Product Category
+    07aa8234-5a9e-4a57-ba55-04929eb103fe: Price # Price
     7db8d3e8-0fdc-4b95-99c6-ca1a070a2b43: 'Internal Link' # Internal Link
     7f5d909b-cb28-487e-9983-ad58358e8bd5: 'Navigation Bar' # Navigation Bar
+    9cccf1bc-161a-40e8-92f4-78a926a51b41: 'Product Description' # Product Description
     12e8048e-d3a1-4d2c-bc3e-a9b6da163928: Images # Images
     25e70b64-37f2-4ac1-8790-4dbcee388934: Number # Number
     35e90512-ecda-42c8-9be2-66cd7511627e: soa-ecommerce # soa-ecommerce
     75a90b55-06a9-4ee2-9d8f-97ce8ef8354c: 'Contact Us' # Contact Us
     76a8f2c5-8d17-4b34-9c7c-671f640fd131: 'Category Image' # Category Image
     499f1502-cd22-467e-b783-f88eaccd7d0b: 'External Link' # External Link
+    531f6ffd-afc5-424d-80e2-6ccf35c1bfaf: Product # Product
     545dbae7-338b-492a-a24b-9153a051d72a: soa-ecommerce # soa-ecommerce
     4301039a-e253-4f71-927e-1727862b740b: 'Contact Us' # Contact Us
     5077630c-bce5-401d-a4a4-f43e3e7b6d51: Home # Home
+    7781759d-82ae-414e-b7f4-5a55984bc44a: Products # Products
     99530734-3886-4207-a28f-4da1178a4ae2: 'Hero Banner Image' # Hero Banner Image
     a209e571-accf-4a47-9e1d-1c3866d41810: 'Hero Banner' # Hero Banner
     bc21ecad-498f-46f6-b9f8-6e75358584ea: 'Nav Link' # Nav Link
     c7840ac1-f8bf-487e-9fe8-ace6ce560d25: 'Product Categories' # Product Categories
+    de498f5f-35d2-48a2-9c8c-a9bef898f09e: 'Product Images' # Product Images
+    eb6f21a9-c367-4cdd-80c3-6c6bbad85138: AvantLink # AvantLink
     ecf38a79-fcfc-4927-a60b-883811cf1ef5: 'Category Cards' # Category Cards
     f27e355f-cdc4-4325-9c14-94e60e667bfa: Home # Home
 system:
