@@ -4,3 +4,5 @@
 /.DS_Store
 /designs
 /storage
+.node_modules
+/web/uploads
